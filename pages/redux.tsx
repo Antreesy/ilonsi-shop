@@ -1,13 +1,14 @@
-import type { NextPage } from 'next'
+//Global Dependencies
+import type { NextPage } from "next";
 
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Radio, RadioGroup } from '@mui/material'
-import { CustomButton } from '../components/UiKit'
-import Counter from '../components/Counter/Counter'
+//Project Components
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import Counter from "../features/Counter/Counter";
 
-import styles from '../styles/Index.module.scss'
+//Project Styles
+import styles from "../styles/Index.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -17,16 +18,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>
-          Redux page
-        </h1>
+        <h1>Redux page</h1>
 
         <p className={styles.description}>
-          Go back to {' '}
+          Go back to{" "}
           <Link href="/">
             <a className={styles.title__link}>/index</a>
-          </Link>
-          {' '}page
+          </Link>{" "}
+          page
         </p>
 
         <Counter />
@@ -38,14 +37,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,19 +1,32 @@
+//Global Dependencies
 import React from "react";
 import classNames from "classnames";
+
+//Project Components
 import { Button } from "@mui/material";
 
-import styles from "./customButton.module.scss"
+//Project Styles
+import styles from "./customButton.module.scss";
 
+//Local Interfaces
 interface CustomButtonProps {
   className?: string;
   disabled?: boolean;
   variant?: "text" | "outlined" | "contained";
-  color?: "primary" | "inherit" | "secondary" | "success" | "error" | "info" | "warning";
+  color?:
+    | "primary"
+    | "inherit"
+    | "secondary"
+    | "success"
+    | "error"
+    | "info"
+    | "warning";
   children: React.ReactNode;
   onClick?: () => void;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = (props) => {
+  // Props destructuring
   const {
     children,
     disabled = false,
@@ -21,9 +34,10 @@ const CustomButton: React.FC<CustomButtonProps> = (props) => {
     variant = "contained",
     color = "primary",
     onClick,
-   } = props;
+  } = props;
 
-  const buttonClass = classNames(styles.button, className)
+  // Local functions
+  const buttonClass = classNames(styles.button, className);
 
   return (
     <Button
@@ -35,7 +49,7 @@ const CustomButton: React.FC<CustomButtonProps> = (props) => {
     >
       {children}
     </Button>
-  )
+  );
 };
 
 export default CustomButton;

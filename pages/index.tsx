@@ -1,10 +1,15 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Index.module.scss'
+//Global Dependencies
+import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+//Project Components
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
+//Project Styles
+import styles from "../styles/Index.module.scss";
+
+const Index: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,26 +17,23 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>
-          Welcome to Ilonsi shop!
-        </h1>
+        <h1>Welcome to Ilonsi shop!</h1>
 
         <p className={styles.description}>
-          UI Kit is on {' '}
+          UI Kit is on{" "}
           <Link href="/uikit">
             <a className={styles.title__link}>/uikit</a>
-          </Link>
-          {' '}page
+          </Link>{" "}
+          page
         </p>
 
         <p className={styles.description}>
-          Redux example is on {' '}
+          Redux example is on{" "}
           <Link href="/redux">
             <a className={styles.title__link}>/redux</a>
-          </Link>
-          {' '}page
+          </Link>{" "}
+          page
         </p>
-
       </main>
 
       <footer className={styles.footer}>
@@ -40,14 +42,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Index;

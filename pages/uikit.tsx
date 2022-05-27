@@ -1,12 +1,24 @@
-import type { NextPage } from 'next'
+//Global Dependencies
+import type { NextPage } from "next";
 
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Radio, RadioGroup } from '@mui/material'
-import { CustomButton } from '../components/UiKit'
+//Project Components
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  FormLabel,
+  Radio,
+  RadioGroup,
+} from "@mui/material";
+import { CustomButton } from "../uikit";
 
-import styles from '../styles/Index.module.scss'
+//Project Styles
+import styles from "../styles/Index.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -16,39 +28,59 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>
-          UI Kit page
-        </h1>
+        <h1>UI Kit page</h1>
 
         <p className={styles.description}>
-          Go back to {' '}
+          Go back to{" "}
           <Link href="/">
             <a className={styles.title__link}>/index</a>
-          </Link>
-          {' '}page
+          </Link>{" "}
+          page
         </p>
 
         <div className={styles.uikit_grid}>
-          <CustomButton className={styles.example_button}>Custom Button</CustomButton>
-          <CustomButton className={styles.example_button} disabled>Disabled Button</CustomButton>
-          <CustomButton className={styles.example_button_outlined}>Custom Outlined Button</CustomButton>
-          <CustomButton className={styles.example_button_outlined} disabled>Disabled Outlined Button</CustomButton>
+          <CustomButton className={styles.example_button}>
+            Custom Button
+          </CustomButton>
+          <CustomButton className={styles.example_button} disabled>
+            Disabled Button
+          </CustomButton>
+          <CustomButton className={styles.example_button_outlined}>
+            Custom Outlined Button
+          </CustomButton>
+          <CustomButton className={styles.example_button_outlined} disabled>
+            Disabled Outlined Button
+          </CustomButton>
         </div>
 
         <div className={styles.uikit_grid}>
           <Button variant="contained">Contained Button</Button>
           <Button variant="outlined">Outlined Button</Button>
-          <Button variant="contained" disabled>Disabled Button</Button>
+          <Button variant="contained" disabled>
+            Disabled Button
+          </Button>
           <Link href="/">
-            <Button variant="contained" color="secondary">Link Button</Button>
+            <Button variant="contained" color="secondary">
+              Link Button
+            </Button>
           </Link>
         </div>
 
         <div className={styles.uikit_grid}>
           <FormGroup>
-            <FormControlLabel control={<Checkbox defaultChecked />} label="Checkbox" />
-            <FormControlLabel control={<Checkbox color="secondary" />} label="Another checkbox" />
-            <FormControlLabel disabled control={<Checkbox />} label="Disabled checkbox" />
+            <FormControlLabel
+              control={<Checkbox defaultChecked />}
+              label="Checkbox"
+            />
+            <FormControlLabel
+              control={<Checkbox color="secondary" />}
+              label="Another checkbox"
+            />
+            <FormControlLabel
+              disabled
+              control={<Checkbox />}
+              label="Disabled checkbox"
+            />
           </FormGroup>
 
           <FormControl>
@@ -58,9 +90,17 @@ const Home: NextPage = () => {
               defaultValue="female"
               name="radio-buttons-group"
             >
-              <FormControlLabel value="female" control={<Radio />} label="Female" />
+              <FormControlLabel
+                value="female"
+                control={<Radio />}
+                label="Female"
+              />
               <FormControlLabel value="male" control={<Radio />} label="Male" />
-              <FormControlLabel value="other" control={<Radio />} label="Helicopter" />
+              <FormControlLabel
+                value="other"
+                control={<Radio />}
+                label="Helicopter"
+              />
             </RadioGroup>
           </FormControl>
         </div>
@@ -72,14 +112,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
