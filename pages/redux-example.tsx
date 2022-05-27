@@ -5,12 +5,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Counter from "../features/Counter/Counter";
+import { Counter } from "../Сomponents";
 
 //Project Styles
 import styles from "../styles/Index.module.scss";
 
-const Home: NextPage = () => {
+const ReduxExample: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -47,4 +47,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default ReduxExample;

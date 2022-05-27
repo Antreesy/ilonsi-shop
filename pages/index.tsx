@@ -21,16 +21,16 @@ const Index: NextPage = () => {
 
         <p className={styles.description}>
           UI Kit is on{" "}
-          <Link href="/uikit">
-            <a className={styles.title__link}>/uikit</a>
+          <Link href="/components-example">
+            <a className={styles.title__link}>/components-example</a>
           </Link>{" "}
           page
         </p>
 
         <p className={styles.description}>
           Redux example is on{" "}
-          <Link href="/redux">
-            <a className={styles.title__link}>/redux</a>
+          <Link href="/redux-example">
+            <a className={styles.title__link}>/redux-example</a>
           </Link>{" "}
           page
         </p>
