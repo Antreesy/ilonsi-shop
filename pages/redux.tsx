@@ -1,37 +1,35 @@
 import type { NextPage } from 'next'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Radio, RadioGroup } from '@mui/material'
+import { CustomButton } from '../components/UiKit'
+import Counter from '../components/Counter/Counter'
+
 import styles from '../styles/Index.module.scss'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>ILONSI SHOP | Homepage</title>
+        <title>ILONSI SHOP | UI Kit page</title>
       </Head>
 
       <main className={styles.main}>
         <h1>
-          Welcome to Ilonsi shop!
+          Redux page
         </h1>
 
         <p className={styles.description}>
-          UI Kit is on {' '}
-          <Link href="/uikit">
-            <a className={styles.title__link}>/uikit</a>
+          Go back to {' '}
+          <Link href="/">
+            <a className={styles.title__link}>/index</a>
           </Link>
           {' '}page
         </p>
 
-        <p className={styles.description}>
-          Redux example is on {' '}
-          <Link href="/redux">
-            <a className={styles.title__link}>/redux</a>
-          </Link>
-          {' '}page
-        </p>
-
+        <Counter />
       </main>
 
       <footer className={styles.footer}>
